@@ -1,38 +1,44 @@
-<div align="center">
+<div class="novel-hero-block">
 
-# 『嘘つきパレットと剥落の聖女』
-### ―異端修復師は神話の塗り潰しを暴く―
-*(The Liar's Palette and the Peeling Saint)*
+  <div class="novel-hero-main">『嘘つきパレットと剥落の聖女』</div>
+  <div class="novel-hero-sub">―異端修復師は神話の塗り潰しを暴く―</div>
+  <div class="novel-hero-en">The Liar's Palette and the Peeling Saint</div>
 
-<img src="./assets/key_visual_v2.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" />
+  <div style="max-width: 820px; margin: 0 auto;">
+    <img src="./assets/key_visual_v2.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" style="border-radius: 8px; box-shadow: 0 10px 32px rgba(0,0,0,0.45);" />
+  </div>
 
-<br />
+  <div class="novel-hero-catch">
+    「――その薄っぺらな神話（オーバーペイント）、俺が基底層まで引っぺがしてやるよ」
+  </div>
 
-**「――その薄っぺらな神話（オーバーペイント）、俺が基底層まで引っぺがしてやるよ」**
+  <div class="novel-hero-badges">
+    <a href="./chapters/ch01.md"><img src="https://img.shields.io/badge/全12話完結-135,752文字-1E3FAD?style=for-the-badge" alt="全12話完結" /></a>
+    <a href="./notes/world.md"><img src="https://img.shields.io/badge/Genre-古典絵画修復科学×聖遺物バトル×ダークファンタジー-B81D13?style=for-the-badge" alt="ジャンル" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/100%25_AI_Autonomous-Google_Antigravity-D4AF37?style=for-the-badge" alt="AI自律執筆" /></a>
+    <a href="https://palette.ecolifechallenge.com/"><img src="https://img.shields.io/badge/音声朗読機能-行・段落指定再生対応-2ea44f?style=for-the-badge" alt="音声朗読機能" /></a>
+  </div>
 
-[![Episodes](https://img.shields.io/badge/全12話完結-135,752文字-1E3FAD?style=for-the-badge)](./chapters/ch01.md)
-[![Genre](https://img.shields.io/badge/Genre-古典絵画修復科学×聖遺物バトル×ダークファンタジー-B81D13?style=for-the-badge)](./notes/world.md)
-[![AI Autonomous](https://img.shields.io/badge/100%25_AI_Autonomous-Google_Antigravity-D4AF37?style=for-the-badge)](#)
-[![TTS Audio Reader](https://img.shields.io/badge/音声朗読機能-行・段落指定再生対応-2ea44f?style=for-the-badge)](https://palette.ecolifechallenge.com/)
-
-[**▶ 今すぐ第1話を読む（`chapters/ch01.md`）**](./chapters/ch01.md) ｜ [**🌍 世界観・修復科学設定**](./notes/world.md) ｜ [**🎭 キャラクター設定表**](./notes/characters.md)
+  <p style="font-size: 1.05rem; margin-top: 14px; text-align: center;">
+    <a href="./chapters/ch01.md"><strong>第1話を読む</strong></a> ｜ <a href="./notes/world.md"><strong>世界観・修復科学設定</strong></a> ｜ <a href="./notes/characters.md"><strong>キャラクター設定表</strong></a>
+  </p>
 
 </div>
 
 ---
 
-## 🤖 プロジェクト概要：AI完全自律アニメ原作小説執筆プロジェクト
+## プロジェクト概要：AI完全自律アニメ原作小説執筆プロジェクト
 
 本作品および特設サイト（`https://palette.ecolifechallenge.com`）は、**「人間のフィードバックや軌道修正を一切挟まず、AI（Google Antigravity）の独力・完全自律だけで、どこまで面白いアニメ1クール原作小説を創り上げられるか」**に挑んだ実験的プロジェクトです。
 
 1. **アニメ・ラノベ市場調査＆企画自己選出**: 最新トレンド分析から3つの企画候補を立案し、AI自身の自己採点（97/100点）によって本作を選出。
 2. **専門知識調査＆世界観構築**: 西洋古典絵画の構造（ボローニャ石膏地・赤土ボーロ・水押し金箔・卵黄テンペラ・油彩）と保存修復科学（顔料の毒性・黒変現象・赤外線リフレクトグラフィ・剥離転写法ストラッポ）を調査し、バトル＆ミステリー体系へ昇華。
 3. **全12話（48シーン）詳細設計＆完全自律執筆**: 各話ごとに「執筆 → 6項目の鬼の自己推敲（口調・要約排除・科学描写・伏線整合性） → 直接改稿 → 動的状態シート（`state.md`）の更新」を自律ループで実行し、**全12話・計135,752文字（文庫本換算で約1.5冊分）**の完成原稿を一気通貫で執筆。
-4. **公式ビジュアル生成**: 設定資料に基づき、透明水彩・つけペン線画タッチ（v2）およびアニメデジタル彩色タッチ（v1）のキービジュアル＆主要キャラクターイラストを生成。
+4. **公式ビジュアル生成**: 設定資料に基づき、透明水彩・つけペン線画タッチ（v2）の公式キービジュアル＆主要キャラクターイラストを生成。
 
 ---
 
-## 📖 INTRODUCTION / あらすじ
+## INTRODUCTION / あらすじ
 
 > **美しい嘘（オーバーペイント）で塗り固められたこの街で、**
 > **俺たちは一番残酷で、一番眩しい「下絵（オリジナル）」に恋をした。**
@@ -60,7 +66,7 @@
 
 ---
 
-## 🎭 CHARACTERS / 登場人物
+## CHARACTERS / 登場人物
 
 <table>
   <tr>
@@ -135,21 +141,7 @@
   </tr>
 </table>
 
-<details>
-<summary><b>🎨 初版アニメキービジュアル＆キャラクターイラスト（v1・デジタル彩色版）ギャラリーを表示</b></summary>
-<br />
-<div align="center">
-  <img src="./assets/key_visual.png" alt="キービジュアル v1" width="90%" />
-  <br /><br />
-  <img src="./assets/characters/luka_main.png" alt="ルカ v1" width="18%" />
-  <img src="./assets/characters/iris_main.png" alt="イリス v1" width="18%" />
-  <img src="./assets/characters/julian_main.png" alt="ユリアン v1" width="18%" />
-  <img src="./assets/characters/chiara_main.png" alt="キアラ v1" width="18%" />
-  <img src="./assets/characters/savonarola_main.png" alt="サヴォナローラ v1" width="18%" />
-</div>
-</details>
 
----
 
 ## 📚 EPISODES / 本編・全12話エピソード一覧（全話無料公開）
 
@@ -172,7 +164,7 @@
 
 ---
 
-## 🗂️ 公式設定資料（`notes/`）
+## 公式設定資料（`notes/`）
 
 本作の世界をより深く味わうための世界観および登場人物設定を公開しています。
 

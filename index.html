@@ -55,40 +55,49 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
   <style>
-    :root {
-      --bg-primary: #0f1319;
-      --bg-secondary: #161c26;
-      --bg-toolbar: rgba(15, 19, 25, 0.92);
-      --text-primary: #e6edf3;
-      --text-secondary: #9ba7b4;
-      --accent-blue: #3b6ef6;
-      --accent-gold: #d4af37;
-      --border-color: #263042;
+    /* ========================================================
+       Global Theme Variables (スタイル集約設計・再設定容易性)
+       ======================================================== */
+    :root, html[data-theme="dark"] {
+      --bg-primary: #0d1117;          /* 濃紺メイン背景 */
+      --bg-secondary: #161e2b;        /* カード・サイドバー・テーブル背景 */
+      --bg-toolbar: rgba(13, 17, 23, 0.94); /* ヘッダー・プレイヤー半透明背景 */
+      --text-primary: #f0f4f8;        /* メイン文字色（暗色背景でくっきり読める反転白） */
+      --text-secondary: #a0aec0;      /* 補足・サブテキスト */
+      --text-muted: #718096;          /* さらに薄いテキスト */
+      --accent-gold: #e5c07b;         /* アクセント金（ロゴ・サブタイトル） */
+      --accent-blue: #4a7dff;         /* アクセント青（ボタン・選択） */
+      --border-color: #263345;        /* 境界線 */
+      --table-stripe: #121822;        /* テーブル交互色 */
       --reader-font: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
       --reader-font-size: 17.5px;
       --reader-line-height: 2.05;
     }
 
-    html[data-theme="light"] {
-      --bg-primary: #fafbfd;
-      --bg-secondary: #f0f3f8;
-      --bg-toolbar: rgba(250, 251, 253, 0.94);
-      --text-primary: #1e242b;
-      --text-secondary: #586370;
-      --accent-blue: #1e3fad;
-      --accent-gold: #b3861b;
-      --border-color: #dce2ec;
+    html[data-theme="sepia"] {
+      --bg-primary: #f6f0e2;          /* 羊皮紙メイン背景 */
+      --bg-secondary: #ede3ce;        /* カード・サイドバー背景 */
+      --bg-toolbar: rgba(246, 240, 226, 0.94);
+      --text-primary: #2d2215;        /* セピア用濃茶文字 */
+      --text-secondary: #6e5842;      /* サブテキスト */
+      --text-muted: #8c7358;
+      --accent-gold: #9e6f15;
+      --accent-blue: #2c4da0;
+      --border-color: #dbc9a7;
+      --table-stripe: #e8dcc3;
     }
 
-    html[data-theme="sepia"] {
-      --bg-primary: #f5eedc;
-      --bg-secondary: #ebe1c8;
-      --bg-toolbar: rgba(245, 238, 220, 0.94);
-      --text-primary: #2c2216;
-      --text-secondary: #695742;
-      --accent-blue: #23408e;
-      --accent-gold: #9a6b13;
-      --border-color: #d8c8a8;
+    html[data-theme="light"] {
+      --bg-primary: #f8fafc;          /* 白亜メイン背景 */
+      --bg-secondary: #eef2f6;        /* カード・サイドバー背景 */
+      --bg-toolbar: rgba(248, 250, 252, 0.95);
+      --text-primary: #1a202c;        /* 白背景用ダーク文字 */
+      --text-secondary: #4a5568;      /* サブテキスト */
+      --text-muted: #718096;
+      --accent-gold: #b78103;
+      --accent-blue: #2563eb;
+      --border-color: #cbd5e1;
+      --table-stripe: #f1f5f9;
     }
 
     body {
@@ -99,6 +108,35 @@
       line-height: var(--reader-line-height);
       transition: background-color 0.25s ease, color 0.25s ease;
       padding-top: 52px;
+    }
+
+    /* ========================================================
+       Docsify Base CSS Text Color Overrides (濃紺での黒文字バグ完全解決)
+       ======================================================== */
+    .markdown-section,
+    .markdown-section *,
+    .markdown-section p,
+    .markdown-section ol,
+    .markdown-section ul,
+    .markdown-section li,
+    .markdown-section strong,
+    .markdown-section b,
+    .markdown-section em,
+    .markdown-section table,
+    .markdown-section td,
+    .markdown-section th {
+      color: var(--text-primary) !important;
+    }
+
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4,
+    .markdown-section h5,
+    .markdown-section h6 {
+      color: var(--text-primary) !important;
+      font-family: var(--reader-font);
+      border-bottom-color: var(--border-color) !important;
     }
 
     /* Fixed Reader Top Bar */
@@ -547,42 +585,78 @@
        ======================================================== */
     .tts-target {
       position: relative;
-      cursor: pointer;
+      cursor: text; /* 自然な文字選択・ドラッグを最優先 */
       transition: background-color 0.2s ease, border-color 0.2s ease;
       border-radius: 4px;
-      padding: 2px 6px;
-      margin-left: -6px;
-      margin-right: -6px;
+      padding: 2px 6px 2px 28px; /* 左側に再生アイコン用の余白 */
+      margin-left: -28px;
     }
 
     .tts-target:hover {
-      background: rgba(59, 110, 246, 0.08);
+      background: rgba(59, 110, 246, 0.05);
     }
 
-    /* Floating play button indicator on hover */
-    .tts-target::before {
-      content: "▶ 朗読";
+    /* Left-side play button (完全非表示・カーソル乗下時のみ優雅に出現) */
+    .tts-play-handle {
       position: absolute;
-      left: -64px;
+      left: 2px;
       top: 50%;
-      transform: translateY(-50%);
-      background: var(--accent-gold);
-      color: #111;
-      font-size: 11px;
-      font-weight: 700;
-      font-family: 'Noto Sans JP', sans-serif;
-      padding: 2px 6px;
-      border-radius: 4px;
+      transform: translateY(-50%) scale(0.85);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      color: var(--accent-gold);
+      border: 1px solid var(--accent-gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      cursor: pointer;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.15s ease, transform 0.15s ease;
-      white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease;
+      user-select: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
-    .tts-target:hover::before {
-      opacity: 0.95;
-      transform: translateY(-50%) translateX(4px);
+    .tts-target:hover .tts-play-handle {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(-50%) scale(1.08);
+      background: var(--accent-gold);
+      color: #111;
+    }
+
+    @media (max-width: 768px) {
+      .tts-play-handle {
+        display: none !important; /* スマホでは選択ツールチップのみ機能 */
+      }
+      .tts-target {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    /* Floating selection tooltip */
+    #tts-selection-tooltip {
+      position: absolute;
+      background: var(--accent-gold);
+      color: #111;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      z-index: 10001;
+      display: none;
+      user-select: none;
+      font-family: 'Noto Sans JP', sans-serif;
+      transform: translateY(-100%) translateY(-6px);
+    }
+    #tts-selection-tooltip:hover {
+      background: #fef08a;
     }
 
     /* Active Speaking Paragraph Highlight */
@@ -750,20 +824,110 @@
         padding: 24px 16px 70px !important;
       }
     }
+  
+    /* ========================================================
+       Top Page Hero Title & Subtitle Styling (一体感のある組版)
+       ======================================================== */
+    .novel-hero-block {
+      text-align: center;
+      margin: 10px auto 26px auto;
+    }
+    .novel-hero-main {
+      font-size: 2.15rem;
+      font-weight: 700;
+      color: var(--accent-gold) !important;
+      font-family: var(--reader-font);
+      letter-spacing: 0.05em;
+      line-height: 1.25;
+      margin: 0 0 6px 0;
+    }
+    .novel-hero-sub {
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--text-primary) !important;
+      letter-spacing: 0.08em;
+      margin: 0 0 4px 0;
+      opacity: 0.92;
+    }
+    .novel-hero-en {
+      font-size: 0.88rem;
+      font-family: 'Cinzel', serif;
+      font-style: italic;
+      color: var(--text-secondary) !important;
+      letter-spacing: 0.12em;
+      margin: 0 0 20px 0;
+    }
+    .novel-hero-catch {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent-gold) !important;
+      margin: 18px 0 14px 0;
+      letter-spacing: 0.04em;
+    }
+    .novel-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 12px 0 20px 0;
+    }
+
+    /* Table & Character Card Styling */
+    .markdown-section table {
+      width: 100% !important;
+      border-collapse: separate !important;
+      border-spacing: 0 !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      margin: 24px 0 !important;
+    }
+    .markdown-section table tr:nth-child(even) {
+      background-color: var(--table-stripe) !important;
+    }
+    .markdown-section table th {
+      background-color: var(--bg-secondary) !important;
+      color: var(--accent-gold) !important;
+      font-weight: 700 !important;
+      border-bottom: 2px solid var(--border-color) !important;
+      padding: 10px 14px !important;
+    }
+    .markdown-section table td {
+      border-bottom: 1px solid var(--border-color) !important;
+      padding: 12px 14px !important;
+      line-height: 1.6 !important;
+    }
+
+    @media (max-width: 600px) {
+      .novel-hero-main {
+        font-size: 1.6rem !important;
+      }
+      .novel-hero-sub {
+        font-size: 0.98rem !important;
+      }
+      .novel-hero-catch {
+        font-size: 1.0rem !important;
+      }
+      .markdown-section table td {
+        padding: 8px 10px !important;
+        font-size: 13.5px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
   <!-- Reader Control & Language Topbar -->
   <header class="novel-topbar notranslate">
     <a href="#/" class="novel-topbar-title">
-      <span>🎨 嘘つきパレット<span class="desktop-only">と剥落の聖女</span></span>
+      <span>嘘つきパレット<span class="desktop-only">と剥落の聖女</span></span>
       <span class="sub desktop-only" style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">―異端修復師は神話の塗り潰しを暴く―</span>
     </a>
 
     <div class="novel-topbar-controls">
       <!-- TTS Audio Reader Toggle Button -->
       <button class="ctrl-btn tts-top-btn" id="tts-toggle-btn" onclick="toggleTTSPlayer()" title="音声朗読プレイヤーを開く/閉じる">
-        🎧 朗読
+        朗読
       </button>
 
       <!-- Language Selector (Worldwide Translation) -->
@@ -784,29 +948,29 @@
 
       <!-- Settings Dropdown Toggle Button -->
       <button class="ctrl-btn settings-toggle-btn" id="settings-toggle-btn" onclick="toggleSettingsDropdown()" title="表示設定（色・フォント・サイズ）">
-        ⚙️ <span class="desktop-only">表示設定</span>
+        表示設定
       </button>
     </div>
 
     <!-- Dropdown Panel for Reader Settings (Theme, Font, Font Size) -->
     <div id="reader-settings-panel" class="reader-settings-panel">
       <div class="settings-row">
-        <span class="settings-label">🎨 背景色</span>
+        <span class="settings-label">背景色</span>
         <div class="ctrl-group">
-          <button class="ctrl-btn active" id="theme-dark" onclick="setTheme('dark')">🌙 濃紺</button>
-          <button class="ctrl-btn" id="theme-sepia" onclick="setTheme('sepia')">📜 羊皮紙</button>
-          <button class="ctrl-btn" id="theme-light" onclick="setTheme('light')">☀️ 白亜</button>
+          <button class="ctrl-btn active" id="theme-dark" onclick="setTheme('dark')">濃紺</button>
+          <button class="ctrl-btn" id="theme-sepia" onclick="setTheme('sepia')">羊皮紙</button>
+          <button class="ctrl-btn" id="theme-light" onclick="setTheme('light')">白亜</button>
         </div>
       </div>
       <div class="settings-row">
-        <span class="settings-label">🔤 書体</span>
+        <span class="settings-label">書体</span>
         <div class="ctrl-group">
           <button class="ctrl-btn active" id="font-serif" onclick="setFont('serif')">明朝体</button>
           <button class="ctrl-btn" id="font-sans" onclick="setFont('sans')">ゴシック</button>
         </div>
       </div>
       <div class="settings-row">
-        <span class="settings-label">🔍 文字サイズ</span>
+        <span class="settings-label">文字サイズ</span>
         <div class="ctrl-group">
           <button class="ctrl-btn" onclick="changeFontSize(-1.5)">A- 縮小</button>
           <button class="ctrl-btn" onclick="changeFontSize(1.5)">A+ 拡大</button>
@@ -819,7 +983,7 @@
   <div id="tts-player" class="tts-player notranslate">
     <div class="tts-player-top">
       <div class="tts-player-info">
-        <span class="tts-player-badge">🎙 朗読中</span>
+        <span class="tts-player-badge">朗読中</span>
         <span id="tts-status-text" class="tts-player-text">段落をクリックすると、そこから朗読を開始します</span>
       </div>
       <button class="tts-btn" style="padding: 2px 8px; font-size: 11px;" onclick="closeTTSPlayer()" title="プレイヤーを閉じる">✕</button>
@@ -1019,19 +1183,39 @@
       }
     }
 
-    // Attach click listener to each novel paragraph/heading/quote
+    // Attach play handle & selection listener to each novel paragraph/heading/quote
     function initTTSPage() {
       ttsStop();
       ttsNodes = [];
       ttsCurrentIndex = -1;
 
-      // Select content nodes inside markdown section
       const content = document.querySelector('.markdown-section');
       if (!content) return;
 
+      // Remove existing tooltip if any
+      let tooltip = document.getElementById('tts-selection-tooltip');
+      if (!tooltip) {
+        tooltip = document.createElement('div');
+        tooltip.id = 'tts-selection-tooltip';
+        tooltip.textContent = '▶ ここから朗読';
+        document.body.appendChild(tooltip);
+      }
+      tooltip.style.display = 'none';
+
+      // Tooltip click
+      tooltip.onmousedown = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (selectedNodeIndex >= 0) {
+          ttsPlayFrom(selectedNodeIndex);
+        }
+        tooltip.style.display = 'none';
+      };
+
+      let selectedNodeIndex = -1;
+
       const candidates = content.querySelectorAll('p, blockquote, h1, h2, h3, li');
       candidates.forEach((node) => {
-        // Ignore empty, image-only, or button-only nodes
         const rawText = node.innerText.trim();
         if (rawText.length < 2 || node.closest('.novel-topbar') || node.closest('.tts-player')) return;
 
@@ -1039,12 +1223,44 @@
         const nodeIndex = ttsNodes.length;
         ttsNodes.push(node);
 
-        node.onclick = (e) => {
-          // If clicked directly on an anchor link, don't trigger TTS
-          if (e.target.tagName.toLowerCase() === 'a') return;
+        // Add dedicated play handle button
+        let handle = node.querySelector('.tts-play-handle');
+        if (!handle) {
+          handle = document.createElement('span');
+          handle.className = 'tts-play-handle';
+          handle.textContent = '▶';
+          handle.title = 'ここから朗読を開始';
+          node.insertBefore(handle, node.firstChild);
+        }
+
+        // Handle click exclusively starts TTS
+        handle.onclick = (e) => {
           e.stopPropagation();
           ttsPlayFrom(nodeIndex);
         };
+
+        // Text selection detection
+        node.onmouseup = (e) => {
+          const selection = window.getSelection();
+          const selectedText = selection.toString().trim();
+          if (selectedText.length > 0) {
+            selectedNodeIndex = nodeIndex;
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            tooltip.style.left = (rect.left + window.scrollX + rect.width / 2 - 45) + 'px';
+            tooltip.style.top = (rect.top + window.scrollY) + 'px';
+            tooltip.style.display = 'block';
+          } else {
+            tooltip.style.display = 'none';
+          }
+        };
+      });
+
+      // Hide tooltip when clicking anywhere else
+      document.addEventListener('mousedown', (e) => {
+        if (e.target !== tooltip) {
+          tooltip.style.display = 'none';
+        }
       });
     }
 
