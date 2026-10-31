@@ -1021,8 +1021,17 @@
        Top Page Hero Title & Subtitle Styling (一体感のある組版)
        ======================================================== */
     .novel-hero-block {
-      text-align: center;
+      text-align: center !important;
       margin: 10px auto 26px auto;
+    }
+    .novel-hero-block p,
+    p.novel-hero-sub,
+    .novel-hero-sub,
+    p.novel-hero-en,
+    .novel-hero-en,
+    p.novel-hero-catch,
+    .novel-hero-catch {
+      text-align: center !important;
     }
     h1.novel-hero-main,
     .novel-hero-main {
@@ -1043,6 +1052,8 @@
       letter-spacing: 0.08em;
       margin: 0 0 4px 0 !important;
       opacity: 0.92;
+    
+      text-align: center !important;
     }
     .novel-hero-en {
       font-size: 0.88rem;
@@ -1051,6 +1062,8 @@
       color: var(--text-secondary) !important;
       letter-spacing: 0.12em;
       margin: 0 0 20px 0;
+    
+      text-align: center !important;
     }
     .novel-hero-catch {
       font-size: 1.15rem;
@@ -1113,7 +1126,9 @@
       }
       .novel-hero-sub {
         font-size: 0.98rem !important;
-      }
+      
+      text-align: center !important;
+    }
       .novel-hero-catch {
         font-size: 1.0rem !important;
       }

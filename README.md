@@ -1,14 +1,14 @@
 <div align="center" class="novel-hero-block">
 
   <h1 align="center" class="novel-hero-main" style="border-bottom: none; margin-bottom: 4px; padding-bottom: 0px;">『嘘つきパレットと剥落の聖女』</h1>
-  <p align="center" class="novel-hero-sub" style="margin-top: 4px; margin-bottom: 2px;"><b>―異端修復師は神話の塗り潰しを暴く―</b></p>
-  <p align="center" class="novel-hero-en" style="margin-top: 0px; margin-bottom: 18px;"><i>The Liar's Palette and the Peeling Saint</i></p>
+  <p align="center" class="novel-hero-sub" style="text-align: center !important; margin-top: 4px; margin-bottom: 2px;"><b>―異端修復師は神話の塗り潰しを暴く―</b></p>
+  <p align="center" class="novel-hero-en" style="text-align: center !important; margin-top: 0px; margin-bottom: 18px;"><i>The Liar's Palette and the Peeling Saint</i></p>
 
   <div style="max-width: 820px; margin: 0 auto;">
     <img src="./assets/key_visual_v2.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" style="border-radius: 8px; box-shadow: 0 10px 32px rgba(0,0,0,0.45);" />
   </div>
 
-  <p align="center" class="novel-hero-catch">
+  <p align="center" class="novel-hero-catch" style="text-align: center !important;">
     <strong>「――その薄っぺらな神話（オーバーペイント）、俺が基底層まで引っぺがしてやるよ」</strong>
   </p>
 
