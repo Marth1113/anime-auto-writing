@@ -12,10 +12,10 @@
 
 [![Episodes](https://img.shields.io/badge/全12話完結-135,752文字-1E3FAD?style=for-the-badge)](./chapters/ch01.md)
 [![Genre](https://img.shields.io/badge/Genre-古典絵画修復科学×聖遺物バトル×ダークファンタジー-B81D13?style=for-the-badge)](./notes/world.md)
-[![AI Autonomous](https://img.shields.io/badge/100%25_AI_Autonomous-Google_Antigravity-D4AF37?style=for-the-badge)](./AGENTS.md)
+[![AI Autonomous](https://img.shields.io/badge/100%25_AI_Autonomous-Google_Antigravity-D4AF37?style=for-the-badge)](#)
 [![TTS Audio Reader](https://img.shields.io/badge/音声朗読機能-行・段落指定再生対応-2ea44f?style=for-the-badge)](https://palette.ecolifechallenge.com/)
 
-[**▶ 今すぐ第1話を読む（`chapters/ch01.md`）**](./chapters/ch01.md) ｜ [**🌍 世界観・修復科学設定**](./notes/world.md) ｜ [**🎭 キャラクター設定表**](./notes/characters.md) ｜ [**🎬 全12話プロット**](./notes/plot.md)
+[**▶ 今すぐ第1話を読む（`chapters/ch01.md`）**](./chapters/ch01.md) ｜ [**🌍 世界観・修復科学設定**](./notes/world.md) ｜ [**🎭 キャラクター設定表**](./notes/characters.md)
 
 </div>
 
@@ -172,13 +172,12 @@
 
 ---
 
-## 🗂️ 設定資料・設計書アーカイブ（`notes/`）
+## 🗂️ 公式設定資料（`notes/`）
 
-AIが執筆前に構築し、執筆中に動的更新し続けたすべての設計ドキュメントも公開しています。
+本作の世界をより深く味わうための世界観および登場人物設定を公開しています。
 
 - **[`notes/world.md`](./notes/world.md)**: 世界観・三層都市構造・聖骸彩術（古典絵画の5層構造・顔料の化学特性と毒性・修復技術）の体系定義
 - **[`notes/characters.md`](./notes/characters.md)**: 登場人物の詳細設定・口調ルール・アニメ公式ビジュアル仕様書（カラーパレット・シルエット・表情指定）
-- **[`notes/plot.md`](./notes/plot.md)**: 全体ログライン・テーマ・三幕構成・全12話章別プロット
-- **[`notes/state.md`](./notes/state.md)**: 各話終了時点でのステータス変化・イリスの7層剥離進行度・全伏線回収チェックリスト・全12話更新ログ
-- **[`notes/scenes/`](./notes/scenes/)**: 第1話（[`ep01.md`](./notes/scenes/ep01.md)）〜第12話（[`ep12.md`](./notes/scenes/ep12.md)）の各話4シーン詳細設計書（全48シーン）
-- **[`AGENTS.md`](./AGENTS.md)**: 完全自律執筆＆6項目セルフレビューの行動指針マニュアル
+
+> 💡 **【制作裏側・ネタバレ設定資料について】**  
+> 全体の三幕構成・全12話詳細プロット、伏線管理シート、各話4シーン設計書（全48シーン）、AI完全自律執筆マニュアル等の【制作裏側アーカイブ】は、全編読了者限定特典および公式ファンブック（有料ブログ等）にて限定公開予定です。

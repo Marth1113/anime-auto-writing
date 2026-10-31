@@ -15,9 +15,6 @@
   * [第11話：金箔の下の赤土――第六層剥離](chapters/ch11.md)
   * [第12話：大天蓋・剥離転写――嘘つきパレットが描く明日](chapters/ch12.md)
 
-* **🗂️ 公式設定資料・設計書**
+* **🗂️ 公式設定資料**
   * [世界観・聖骸彩術（world.md）](notes/world.md)
   * [登場人物＆ビジュアル仕様（characters.md）](notes/characters.md)
-  * [全体構成＆全12話プロット（plot.md）](notes/plot.md)
-  * [物語状態・伏線管理シート（state.md）](notes/state.md)
-  * [AI自律執筆ルール（AGENTS.md）](AGENTS.md)
