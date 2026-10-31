@@ -4,7 +4,7 @@
 ### ―異端修復師は神話の塗り潰しを暴く―
 *(The Liar's Palette and the Peeling Saint)*
 
-<img src="./assets/key_visual.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル" width="100%" />
+<img src="./assets/key_visual_v2.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" />
 
 <br />
 
@@ -13,6 +13,7 @@
 [![Episodes](https://img.shields.io/badge/全12話完結-135,752文字-1E3FAD?style=for-the-badge)](./chapters/ch01.md)
 [![Genre](https://img.shields.io/badge/Genre-古典絵画修復科学×聖遺物バトル×ダークファンタジー-B81D13?style=for-the-badge)](./notes/world.md)
 [![AI Autonomous](https://img.shields.io/badge/100%25_AI_Autonomous-Google_Antigravity-D4AF37?style=for-the-badge)](./AGENTS.md)
+[![TTS Audio Reader](https://img.shields.io/badge/音声朗読機能-行・段落指定再生対応-2ea44f?style=for-the-badge)](https://palette.ecolifechallenge.com/)
 
 [**▶ 今すぐ第1話を読む（`chapters/ch01.md`）**](./chapters/ch01.md) ｜ [**🌍 世界観・修復科学設定**](./notes/world.md) ｜ [**🎭 キャラクター設定表**](./notes/characters.md) ｜ [**🎬 全12話プロット**](./notes/plot.md)
 
@@ -22,12 +23,12 @@
 
 ## 🤖 プロジェクト概要：AI完全自律アニメ原作小説執筆プロジェクト
 
-本リポジトリ（`anime-auto-writing`）は、**「人間のフィードバックや軌道修正を一切挟まず、AI（Google Antigravity）の独力・完全自律だけで、どこまで面白いアニメ1クール原作小説を創り上げられるか」**に挑んだ実験的プロジェクトです。
+本作品および特設サイト（`https://palette.ecolifechallenge.com`）は、**「人間のフィードバックや軌道修正を一切挟まず、AI（Google Antigravity）の独力・完全自律だけで、どこまで面白いアニメ1クール原作小説を創り上げられるか」**に挑んだ実験的プロジェクトです。
 
 1. **アニメ・ラノベ市場調査＆企画自己選出**: 最新トレンド分析から3つの企画候補を立案し、AI自身の自己採点（97/100点）によって本作を選出。
 2. **専門知識調査＆世界観構築**: 西洋古典絵画の構造（ボローニャ石膏地・赤土ボーロ・水押し金箔・卵黄テンペラ・油彩）と保存修復科学（顔料の毒性・黒変現象・赤外線リフレクトグラフィ・剥離転写法ストラッポ）を調査し、バトル＆ミステリー体系へ昇華。
 3. **全12話（48シーン）詳細設計＆完全自律執筆**: 各話ごとに「執筆 → 6項目の鬼の自己推敲（口調・要約排除・科学描写・伏線整合性） → 直接改稿 → 動的状態シート（`state.md`）の更新」を自律ループで実行し、**全12話・計135,752文字（文庫本換算で約1.5冊分）**の完成原稿を一気通貫で執筆。
-4. **公式ビジュアル生成**: 設定資料に基づき、キービジュアルおよび主要キャラクター5名の公式イラストを自動生成。
+4. **公式ビジュアル生成**: 設定資料に基づき、透明水彩・つけペン線画タッチ（v2）およびアニメデジタル彩色タッチ（v1）のキービジュアル＆主要キャラクターイラストを生成。
 
 ---
 
@@ -64,7 +65,7 @@
 <table>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/luka_main.png" alt="ルカ・ヴァルツ" width="100%" />
+      <img src="./assets/characters/luka_v2.png" alt="ルカ・ヴァルツ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <h3>ルカ・ヴァルツ (Luka Waltz)</h3>
@@ -78,7 +79,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/iris_main.png" alt="イリス・ラピスラズリ" width="100%" />
+      <img src="./assets/characters/iris_v2.png" alt="イリス・ラピスラズリ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <h3>イリス・ラピスラズリ (Iris Lapis-Lazuli)</h3>
@@ -92,7 +93,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/julian_main.png" alt="ユリアン・クレムニッツ" width="100%" />
+      <img src="./assets/characters/julian_v2.png" alt="ユリアン・クレムニッツ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <h3>ユリアン・クレムニッツ (Julian Kremnitz)</h3>
@@ -106,7 +107,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/chiara_main.png" alt="キアラ・ボーロ" width="100%" />
+      <img src="./assets/characters/chiara_v2.png" alt="キアラ・ボーロ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <h3>キアラ・ボーロ (Chiara Bolo)</h3>
@@ -120,7 +121,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/savonarola_main.png" alt="ダンテ・サヴォナローラ" width="100%" />
+      <img src="./assets/characters/savonarola_v2.png" alt="ダンテ・サヴォナローラ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <h3>ダンテ・サヴォナローラ (Dante Savonarola)</h3>
@@ -134,11 +135,25 @@
   </tr>
 </table>
 
+<details>
+<summary><b>🎨 初版アニメキービジュアル＆キャラクターイラスト（v1・デジタル彩色版）ギャラリーを表示</b></summary>
+<br />
+<div align="center">
+  <img src="./assets/key_visual.png" alt="キービジュアル v1" width="90%" />
+  <br /><br />
+  <img src="./assets/characters/luka_main.png" alt="ルカ v1" width="18%" />
+  <img src="./assets/characters/iris_main.png" alt="イリス v1" width="18%" />
+  <img src="./assets/characters/julian_main.png" alt="ユリアン v1" width="18%" />
+  <img src="./assets/characters/chiara_main.png" alt="キアラ v1" width="18%" />
+  <img src="./assets/characters/savonarola_main.png" alt="サヴォナローラ v1" width="18%" />
+</div>
+</details>
+
 ---
 
 ## 📚 EPISODES / 本編・全12話エピソード一覧（全話無料公開）
 
-各話のタイトルをクリックすると、小説本編（Markdown）をそのままお読みいただけます。
+各話のタイトルをクリックすると、小説本編をそのままお読みいただけます。
 
 | 話数 | サブタイトル | 中心となる保存修復科学・見どころ | 文字数 |
 | :---: | :--- | :--- | :---: |
