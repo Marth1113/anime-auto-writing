@@ -78,7 +78,8 @@
       right: 0;
       height: 52px;
       background: var(--bg-toolbar);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
       z-index: 9999;
       display: flex;
@@ -95,17 +96,19 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      flex-shrink: 1;
+      font-size: 14.5px;
     }
 
     .novel-topbar-controls {
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-wrap: nowrap;
+      gap: 6px;
+      flex-shrink: 0;
     }
 
     .ctrl-group {
@@ -121,17 +124,52 @@
       background: transparent;
       border: none;
       color: var(--text-secondary);
-      padding: 4px 8px;
+      padding: 5px 8px;
       font-size: 12px;
       cursor: pointer;
       border-radius: 4px;
       font-family: 'Noto Sans JP', sans-serif;
       transition: all 0.15s ease;
+      white-space: nowrap;
     }
 
     .ctrl-btn:hover, .ctrl-btn.active {
       background: var(--accent-blue);
       color: #ffffff;
+    }
+
+    .tts-top-btn {
+      background: rgba(212, 175, 55, 0.15) !important;
+      border: 1px solid var(--accent-gold) !important;
+      color: var(--accent-gold) !important;
+      font-weight: 700 !important;
+      padding: 5px 10px !important;
+      border-radius: 6px !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .tts-top-btn:hover, .tts-top-btn.active {
+      background: var(--accent-gold) !important;
+      color: #111 !important;
+    }
+
+    .settings-toggle-btn {
+      background: var(--bg-secondary) !important;
+      border: 1px solid var(--border-color) !important;
+      color: var(--text-primary) !important;
+      padding: 5px 10px !important;
+      border-radius: 6px !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+    }
+
+    .settings-toggle-btn:hover, .settings-toggle-btn.active {
+      border-color: var(--accent-gold) !important;
+      color: var(--accent-gold) !important;
     }
 
     /* Language Selector Styling */
@@ -140,10 +178,85 @@
       color: var(--text-primary);
       border: 1px solid var(--border-color);
       border-radius: 6px;
-      padding: 4px 8px;
+      padding: 5px 8px;
       font-size: 12px;
       font-family: 'Noto Sans JP', sans-serif;
       cursor: pointer;
+      max-width: 140px;
+    }
+
+    /* Reader Settings Dropdown Panel */
+    .reader-settings-panel {
+      position: absolute;
+      top: 56px;
+      right: 16px;
+      background: var(--bg-toolbar);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(212, 175, 55, 0.25);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 270px;
+      z-index: 10000;
+      opacity: 0;
+      transform: translateY(-8px);
+      pointer-events: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reader-settings-panel.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .settings-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .settings-label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .desktop-only {
+      display: inline;
+    }
+
+    @media (max-width: 600px) {
+      .desktop-only {
+        display: none !important;
+      }
+      .novel-topbar {
+        padding: 0 10px;
+      }
+      .lang-select {
+        max-width: 75px;
+        padding: 4px 4px;
+        font-size: 11px;
+      }
+      .tts-top-btn {
+        padding: 4px 7px !important;
+        font-size: 11px !important;
+      }
+      .settings-toggle-btn {
+        padding: 4px 7px !important;
+        font-size: 11px !important;
+      }
+      .reader-settings-panel {
+        right: 10px;
+        width: calc(100vw - 20px);
+        max-width: 300px;
+      }
     }
 
     /* Hide default Google Translate banner bar */
@@ -612,51 +725,62 @@
   <!-- Reader Control & Language Topbar -->
   <header class="novel-topbar notranslate">
     <a href="#/" class="novel-topbar-title">
-      <span>🎨 嘘つきパレットと剥落の聖女</span>
-      <span class="sub" style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">―異端修復師は神話の塗り潰しを暴く―</span>
+      <span>🎨 嘘つきパレット<span class="desktop-only">と剥落の聖女</span></span>
+      <span class="sub desktop-only" style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">―異端修復師は神話の塗り潰しを暴く―</span>
     </a>
 
     <div class="novel-topbar-controls">
-      <!-- Language Selector (Worldwide Translation) -->
-      <select id="lang-switcher" class="lang-select" aria-label="Language" onchange="switchLanguage(this.value)">
-        <option value="ja">🇯🇵 日本語 (Original)</option>
-        <option value="en">🇺🇸 English</option>
-        <option value="zh-CN">🇨🇳 简体中文</option>
-        <option value="zh-TW">🇹🇼 繁體中文</option>
-        <option value="ko">🇰🇷 한국어</option>
-        <option value="fr">🇫🇷 Français</option>
-        <option value="es">🇪🇸 Español</option>
-        <option value="de">🇩🇪 Deutsch</option>
-        <option value="it">🇮🇹 Italiano</option>
-        <option value="pt">🇧🇷 Português</option>
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="id">🇮🇩 Bahasa Indonesia</option>
-        <option value="vi">🇻🇳 Tiếng Việt</option>
-      </select>
-
-      <!-- Theme Switcher -->
-      <div class="ctrl-group" title="背景テーマ切替">
-        <button class="ctrl-btn active" id="theme-dark" onclick="setTheme('dark')">🌙 濃紺</button>
-        <button class="ctrl-btn" id="theme-sepia" onclick="setTheme('sepia')">📜 羊皮紙</button>
-        <button class="ctrl-btn" id="theme-light" onclick="setTheme('light')">☀️ 白亜</button>
-      </div>
-
-      <!-- Font Family Switcher -->
-      <div class="ctrl-group" title="フォント切替">
-        <button class="ctrl-btn active" id="font-serif" onclick="setFont('serif')">明朝</button>
-        <button class="ctrl-btn" id="font-sans" onclick="setFont('sans')">ゴシック</button>
-      </div>
-
-      <!-- Font Size Switcher -->
-      <div class="ctrl-group" title="文字サイズ調整">
-        <button class="ctrl-btn" onclick="changeFontSize(-1.5)">A-</button>
-        <button class="ctrl-btn" onclick="changeFontSize(1.5)">A+</button>
-      </div>
-
       <!-- TTS Audio Reader Toggle Button -->
-      <button class="ctrl-btn" id="tts-toggle-btn" style="background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--accent-gold); font-weight: 700;" onclick="toggleTTSPlayer()" title="音声朗読プレイヤーを開く/閉じる">
+      <button class="ctrl-btn tts-top-btn" id="tts-toggle-btn" onclick="toggleTTSPlayer()" title="音声朗読プレイヤーを開く/閉じる">
         🎧 朗読
       </button>
+
+      <!-- Language Selector (Worldwide Translation) -->
+      <select id="lang-switcher" class="lang-select" aria-label="Language" onchange="switchLanguage(this.value)">
+        <option value="ja">🇯🇵 JP</option>
+        <option value="en">🇺🇸 EN</option>
+        <option value="zh-CN">🇨🇳 中文</option>
+        <option value="ko">🇰🇷 한국어</option>
+        <option value="fr">🇫🇷 FR</option>
+        <option value="es">🇪🇸 ES</option>
+        <option value="de">🇩🇪 DE</option>
+        <option value="it">🇮🇹 IT</option>
+        <option value="pt">🇧🇷 PT</option>
+        <option value="ru">🇷🇺 RU</option>
+        <option value="id">🇮🇩 ID</option>
+        <option value="vi">🇻🇳 VI</option>
+      </select>
+
+      <!-- Settings Dropdown Toggle Button -->
+      <button class="ctrl-btn settings-toggle-btn" id="settings-toggle-btn" onclick="toggleSettingsDropdown()" title="表示設定（色・フォント・サイズ）">
+        ⚙️ <span class="desktop-only">表示設定</span>
+      </button>
+    </div>
+
+    <!-- Dropdown Panel for Reader Settings (Theme, Font, Font Size) -->
+    <div id="reader-settings-panel" class="reader-settings-panel">
+      <div class="settings-row">
+        <span class="settings-label">🎨 背景色</span>
+        <div class="ctrl-group">
+          <button class="ctrl-btn active" id="theme-dark" onclick="setTheme('dark')">🌙 濃紺</button>
+          <button class="ctrl-btn" id="theme-sepia" onclick="setTheme('sepia')">📜 羊皮紙</button>
+          <button class="ctrl-btn" id="theme-light" onclick="setTheme('light')">☀️ 白亜</button>
+        </div>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">🔤 書体</span>
+        <div class="ctrl-group">
+          <button class="ctrl-btn active" id="font-serif" onclick="setFont('serif')">明朝体</button>
+          <button class="ctrl-btn" id="font-sans" onclick="setFont('sans')">ゴシック</button>
+        </div>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">🔍 文字サイズ</span>
+        <div class="ctrl-group">
+          <button class="ctrl-btn" onclick="changeFontSize(-1.5)">A- 縮小</button>
+          <button class="ctrl-btn" onclick="changeFontSize(1.5)">A+ 拡大</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -696,6 +820,23 @@
 
   <script>
     // Reader Preferences Controller
+    function toggleSettingsDropdown() {
+      const panel = document.getElementById('reader-settings-panel');
+      const btn = document.getElementById('settings-toggle-btn');
+      panel.classList.toggle('active');
+      btn.classList.toggle('active', panel.classList.contains('active'));
+    }
+
+    document.addEventListener('click', (e) => {
+      const panel = document.getElementById('reader-settings-panel');
+      const btn = document.getElementById('settings-toggle-btn');
+      if (panel && btn && panel.classList.contains('active')) {
+        if (!panel.contains(e.target) && !btn.contains(e.target)) {
+          panel.classList.remove('active');
+          btn.classList.remove('active');
+        }
+      }
+    });
     let currentFontSize = parseFloat(localStorage.getItem('novel-font-size')) || 17.5;
     document.documentElement.style.setProperty('--reader-font-size', currentFontSize + 'px');
 
