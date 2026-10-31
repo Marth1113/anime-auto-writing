@@ -15,6 +15,37 @@
   <meta property="og:image" content="https://palette.ecolifechallenge.com/assets/key_visual_v2.png">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Favicon / Web App Icons -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.png">
+
+  <!-- Google Analytics (GA4) / Google Tag Manager (GTM) / Search Console Architecture -->
+  <script>
+    // ▼ 分析設定（GTMコンテナID または GA4測定IDを入力するだけで全自動SPA計測が開始されます）
+    window.GA_MEASUREMENT_ID = ''; // 例: 'G-XXXXXXXXXX'
+    window.GTM_CONTAINER_ID = '';  // 例: 'GTM-XXXXXXX'
+
+    window.dataLayer = window.dataLayer || [];
+
+    if (window.GTM_CONTAINER_ID) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',window.GTM_CONTAINER_ID);
+    } else if (window.GA_MEASUREMENT_ID) {
+      const gScript = document.createElement('script');
+      gScript.async = true;
+      gScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+      document.head.appendChild(gScript);
+
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', window.GA_MEASUREMENT_ID, { send_page_view: false });
+    }
+  </script>
+
   <!-- Google Fonts: Noto Serif JP & Noto Sans JP -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -896,6 +927,7 @@
         function(hook, vm) {
           hook.doneEach(function() {
             initTTSPage();
+            trackVirtualPageview();
           });
         }
       ]
@@ -1021,6 +1053,13 @@
         alert('お使いのブラウザは音声合成（TTS）に対応していません。');
         return;
       }
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'tts_start',
+          chapter: location.hash || '/README.md',
+          paragraph_index: index
+        });
+      }
       const player = document.getElementById('tts-player');
       player.classList.add('active');
       const toggleBtn = document.getElementById('tts-toggle-btn');
@@ -1129,6 +1168,45 @@
       ttsStop();
     });
 
+    // SPA Analytics Tracker (GA4 & GTM)
+    let readingCompletedTracked = false;
+    function trackVirtualPageview() {
+      const pagePath = location.hash.replace(/^#/, '') || '/';
+      const pageTitle = document.title;
+      readingCompletedTracked = false;
+
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'virtual_page_view',
+          page_location: location.href,
+          page_path: pagePath,
+          page_title: pageTitle
+        });
+      }
+      if (typeof gtag === 'function' && window.GA_MEASUREMENT_ID) {
+        gtag('event', 'page_view', {
+          page_location: location.href,
+          page_path: pagePath,
+          page_title: pageTitle
+        });
+      }
+    }
+
+    // Scroll Depth / Reading Completion (88%)
+    window.addEventListener('scroll', () => {
+      if (readingCompletedTracked) return;
+      const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollTotal > 300 && (window.scrollY / scrollTotal) >= 0.88) {
+        readingCompletedTracked = true;
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'chapter_read_complete',
+            chapter: location.hash || '/README.md'
+          });
+        }
+      }
+    });
+
     // Worldwide Multilingual Support via Google Translate
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -1138,6 +1216,12 @@
     }
 
     function switchLanguage(lang) {
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'language_switch',
+          target_lang: lang
+        });
+      }
       if (lang === 'ja') {
         document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=." + location.hostname + "; path=/;";
