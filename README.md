@@ -1,26 +1,26 @@
-<div class="novel-hero-block">
+<div align="center" class="novel-hero-block">
 
-  <div class="novel-hero-main">『嘘つきパレットと剥落の聖女』</div>
-  <div class="novel-hero-sub">―異端修復師は神話の塗り潰しを暴く―</div>
-  <div class="novel-hero-en">The Liar's Palette and the Peeling Saint</div>
+  <h1 align="center" class="novel-hero-main" style="border-bottom: none; margin-bottom: 4px; padding-bottom: 0px;">『嘘つきパレットと剥落の聖女』</h1>
+  <p align="center" class="novel-hero-sub" style="margin-top: 4px; margin-bottom: 2px;"><b>―異端修復師は神話の塗り潰しを暴く―</b></p>
+  <p align="center" class="novel-hero-en" style="margin-top: 0px; margin-bottom: 18px;"><i>The Liar's Palette and the Peeling Saint</i></p>
 
   <div style="max-width: 820px; margin: 0 auto;">
     <img src="./assets/key_visual_v2.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" style="border-radius: 8px; box-shadow: 0 10px 32px rgba(0,0,0,0.45);" />
   </div>
 
-  <div class="novel-hero-catch">
-    「――その薄っぺらな神話（オーバーペイント）、俺が基底層まで引っぺがしてやるよ」
-  </div>
+  <p align="center" class="novel-hero-catch">
+    <strong>「――その薄っぺらな神話（オーバーペイント）、俺が基底層まで引っぺがしてやるよ」</strong>
+  </p>
 
-  <div class="novel-hero-badges">
-    <a href="./chapters/ch01.md"><img src="https://img.shields.io/badge/全12話完結-135,752文字-1E3FAD?style=for-the-badge" alt="全12話完結" /></a>
-    <a href="./notes/world.md"><img src="https://img.shields.io/badge/Genre-古典絵画修復科学×聖遺物バトル×ダークファンタジー-B81D13?style=for-the-badge" alt="ジャンル" /></a>
+  <p align="center" class="novel-hero-badges">
+    <a href="./chapters/ch01.md?id=ch01"><img src="https://img.shields.io/badge/全12話完結-135,752文字-1E3FAD?style=for-the-badge" alt="全12話完結" /></a>
+    <a href="./notes/world.md?id=world"><img src="https://img.shields.io/badge/Genre-古典絵画修復科学×聖遺物バトル×ダークファンタジー-B81D13?style=for-the-badge" alt="ジャンル" /></a>
     <a href="#"><img src="https://img.shields.io/badge/100%25_AI_Autonomous-Google_Antigravity-D4AF37?style=for-the-badge" alt="AI自律執筆" /></a>
     <a href="https://palette.ecolifechallenge.com/"><img src="https://img.shields.io/badge/音声朗読機能-行・段落指定再生対応-2ea44f?style=for-the-badge" alt="音声朗読機能" /></a>
-  </div>
+  </p>
 
-  <p style="font-size: 1.05rem; margin-top: 14px; text-align: center;">
-    <a href="./chapters/ch01.md"><strong>第1話を読む</strong></a> ｜ <a href="./notes/world.md"><strong>世界観・修復科学設定</strong></a> ｜ <a href="./notes/characters.md"><strong>キャラクター設定表</strong></a>
+  <p align="center" style="font-size: 1.05rem; margin-top: 14px;">
+    <a href="./chapters/ch01.md?id=ch01"><strong>第1話を読む</strong></a> ｜ <a href="./notes/world.md?id=world"><strong>世界観・修復科学設定</strong></a> ｜ <a href="./notes/characters.md?id=characters"><strong>キャラクター設定表</strong></a>
   </p>
 
 </div>
@@ -34,7 +34,7 @@
 1. **アニメ・ラノベ市場調査＆企画自己選出**: 最新トレンド分析から3つの企画候補を立案し、AI自身の自己採点（97/100点）によって本作を選出。
 2. **専門知識調査＆世界観構築**: 西洋古典絵画の構造（ボローニャ石膏地・赤土ボーロ・水押し金箔・卵黄テンペラ・油彩）と保存修復科学（顔料の毒性・黒変現象・赤外線リフレクトグラフィ・剥離転写法ストラッポ）を調査し、バトル＆ミステリー体系へ昇華。
 3. **全12話（48シーン）詳細設計＆完全自律執筆**: 各話ごとに「執筆 → 6項目の鬼の自己推敲（口調・要約排除・科学描写・伏線整合性） → 直接改稿 → 動的状態シート（`state.md`）の更新」を自律ループで実行し、**全12話・計135,752文字（文庫本換算で約1.5冊分）**の完成原稿を一気通貫で執筆。
-4. **公式ビジュアル生成**: 設定資料に基づき、透明水彩・つけペン線画タッチ（v2）の公式キービジュアル＆主要キャラクターイラストを生成。
+4. **公式ビジュアル生成**: 設定資料に基づき、透明水彩・つけペン線画タッチの公式キービジュアル＆主要キャラクターイラストを生成。
 
 ---
 
@@ -71,10 +71,10 @@
 <table>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/luka_v2.png" alt="ルカ・ヴァルツ" width="100%" />
+      <img src="./assets/characters/luka.png" alt="ルカ・ヴァルツ" width="100%" />
     </td>
     <td width="65%" valign="top">
-      <h3>ルカ・ヴァルツ (Luka Waltz)</h3>
+      <div class="character-card-name">ルカ・ヴァルツ (Luka Waltz)</div>
       <p><b>「――亀裂網（クラクリュール）の角度が不自然だ。その薄っぺらな神話（オーバーペイント）、俺が基底層まで引っぺがしてやるよ」</b></p>
       <ul>
         <li><b>肩書</b>：灰底街の闇修復師（ブラック・コンサベーター）兼 贋作師 ／ 『atelier ペンティメント』店主（21歳）</li>
@@ -85,10 +85,10 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/iris_v2.png" alt="イリス・ラピスラズリ" width="100%" />
+      <img src="./assets/characters/iris.png" alt="イリス・ラピスラズリ" width="100%" />
     </td>
     <td width="65%" valign="top">
-      <h3>イリス・ラピスラズリ (Iris Lapis-Lazuli)</h3>
+      <div class="character-card-name">イリス・ラピスラズリ (Iris Lapis-Lazuli)</div>
       <p><b>「わたくしの背中は、貴方のパレットナイフに預けましたわ。――おやりなさい、ルカ！ この偽りの白を、残らず削ぎ落とすのです！」</b></p>
       <ul>
         <li><b>肩書</b>：生ける聖画（リビング・イコン）『第零聖女：青金石の嘆き』（外見16歳）</li>
@@ -99,10 +99,10 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/julian_v2.png" alt="ユリアン・クレムニッツ" width="100%" />
+      <img src="./assets/characters/julian.png" alt="ユリアン・クレムニッツ" width="100%" />
     </td>
     <td width="65%" valign="top">
-      <h3>ユリアン・クレムニッツ (Julian Kremnitz)</h3>
+      <div class="character-card-name">ユリアン・クレムニッツ (Julian Kremnitz)</div>
       <p><b>「修復とは、傷ついた世界に秩序という名の白を与える行為だ。下層にある醜い下絵など、誰も求めてはいない」</b></p>
       <ul>
         <li><b>肩書</b>：聖彩教会・異端審問修復庁（インクィジシオン・レストウロ）主席執行官（22歳）</li>
@@ -113,10 +113,10 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/chiara_v2.png" alt="キアラ・ボーロ" width="100%" />
+      <img src="./assets/characters/chiara.png" alt="キアラ・ボーロ" width="100%" />
     </td>
     <td width="65%" valign="top">
-      <h3>キアラ・ボーロ (Chiara Bolo)</h3>
+      <div class="character-card-name">キアラ・ボーロ (Chiara Bolo)</div>
       <p><b>「いいかいお嬢ちゃん、金箔ってのはね、その下に塗られた泥臭い赤土（ボーロ）があるからこそ、あんなに温かく輝くもんさね」</b></p>
       <ul>
         <li><b>肩書</b>：灰底街の闇画材・劇物商『赤土堂（ボロ・ショップ）』店主（26歳）</li>
@@ -127,10 +127,10 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/savonarola_v2.png" alt="ダンテ・サヴォナローラ" width="100%" />
+      <img src="./assets/characters/savonarola.png" alt="ダンテ・サヴォナローラ" width="100%" />
     </td>
     <td width="65%" valign="top">
-      <h3>ダンテ・サヴォナローラ (Dante Savonarola)</h3>
+      <div class="character-card-name">ダンテ・サヴォナローラ (Dante Savonarola)</div>
       <p><b>「灰になれ、異端の筆よ。――画装展開、『断罪の熾天使（セラフ・バーミリオン）』」</b></p>
       <ul>
         <li><b>肩書</b>：聖彩教会・枢機卿 兼 異端審問修復庁長官（45歳）</li>
@@ -143,24 +143,24 @@
 
 
 
-## 📚 EPISODES / 本編・全12話エピソード一覧（全話無料公開）
+## EPISODES / 本編・全12話エピソード一覧（全話無料公開）
 
 各話のタイトルをクリックすると、小説本編をそのままお読みいただけます。
 
 | 話数 | サブタイトル | 中心となる保存修復科学・見どころ | 文字数 |
 | :---: | :--- | :--- | :---: |
-| **第1話** | [**『鉛白（クレムニッツ・ホワイト）の棺と群青の少女』**](./chapters/ch01.md) | テレピン油・無水エタノール・氷酢酸による**第1層（ダンマル樹脂＋鉛白）選択的剥離**／イリス覚醒と師匠のモノグラム『V』 | 10,904字 |
-| **第2話** | [**『嘆きの聖母画と黒変する辰砂（バーミリオン）』**](./chapters/ch02.md) | 卵白のメレンゲ菓子とバディ契約／**辰砂（$\alpha\text{-HgS}$）の黒変現象と水銀蒸気毒**／ヨウ化カリウム錯体化と表層剥離 | 10,144字 |
-| **第3話** | [**『白亜の断罪者と雌黄（オーピメント）の黄金翼』**](./chapters/ch03.md) | 時計塔での兄弟子ユリアン戦／師ヴェロッキオの残酷な真実／**第2層（卵黄テンペラ＋三硫化二ヒ素）剥離**と『蒼穹の双翼』 | 11,115字 |
-| **第4話** | [**『真夜中の贋作オークションと紫外線（ブラックライト）の罠』**](./chapters/ch04.md) | 少女人形に変装したイリス／**紫外線蛍光と斜光によるクラクリュール（描き亀裂・焼き亀裂・亀裂流入）の公開真贋鑑定バトル** | 11,280字 |
-| **第5話** | [**『石膏（ジェッソ）の墓標と泣き虫な下絵たち』**](./chapters/ch05.md) | ボローニャ石膏廃鉱山の99体の試作体少女像／「お前が流す涙の温度は人間の温度だ！」／**超音波共鳴メスによる第3層（銅石鹸層）剥離** | 12,309字 |
-| **第6話** | [**『蜜蝋（エンカウスティック）の記憶と落ちてきた空』**](./chapters/ch06.md) | サヴォナローラ戦／亜硫酸ガスによる群青病／**蜜蝋の融点（65℃）を逆利用した第4・5層同時剥離**／世界の真相とルカの**色覚喪失** | 12,212字 |
-| **第7話** | [**『色褪せる視界（モノクローム）と卵白のメレンゲ』**](./chapters/ch07.md) | 白黒（グリザイユ）の朝／**黒焦げのメレンゲを「真っ白だろ？」と差し出すルカと「世界一美しい純白ですわ」と食べるイリス**／涙の投降 | 12,526字 |
-| **第8話** | [**『白き籠の鳥と裏切り者のペンティメント』**](./chapters/ch08.md) | 涙で波打つ（コックリング）書き置き／純白の鳥籠でのイリスの誇り／**ランプの熱で「偽証の羊皮紙」の裏から浮かび上がる没食子鉄インクの遺言** | 10,477字 |
-| **第9話** | [**『師（マエストロ）の遺言と赤土（ボーロ）の誇り』**](./chapters/ch09.md) | 師の愛ある7層の真意／キアラの平手打ちと『赤瑪瑙バニッシャー』の継承／**光の濃淡と凹凸で視る『明暗法（キアロスクーロ）視覚』の開眼** | 10,196字 |
-| **第10話** | [**『兄弟子の白、修復師の黒』**](./chapters/ch10.md) | 硫化水素による鉛白弾幕の黒変粉砕／大理石階段でのユリアンとの一騎打ち／**『白百合のイコン』表層0.3ミリ剥離と師匠の下絵開示** | 8,918字 |
-| **第11話** | [**『金箔の下の赤土（ボーロ）――第六層剥離』**](./chapters/ch11.md) | 溶融鉛の処刑台からの空中救出／**卵白リゾチーム酵素と赤瑪瑙共鳴による第6層（純金箔＋赤土ボーロ）剥離**／最下層シノピアの素顔 | 12,657字 |
-| **第12話** | [**『大天蓋・剥離転写（グラン・ストラッポ）――嘘つきパレットが描く明日』**](./chapters/ch12.md) | **直径100mの偽りの神話天井を引き剥がす『大天蓋・剥離転写』**／蘇る群青色／**贋作核で神話を騙しイリスを人間に解放するタイトル回収＆大団円** | 13,014字 |
+| **第1話** | [**『鉛白（クレムニッツ・ホワイト）の棺と群青の少女』**](./chapters/ch01.md?id=ch01) | テレピン油・無水エタノール・氷酢酸による**第1層（ダンマル樹脂＋鉛白）選択的剥離**／イリス覚醒と師匠のモノグラム『V』 | 10,904字 |
+| **第2話** | [**『嘆きの聖母画と黒変する辰砂（バーミリオン）』**](./chapters/ch02.md?id=ch02) | 卵白のメレンゲ菓子とバディ契約／**辰砂（$\alpha\text{-HgS}$）の黒変現象と水銀蒸気毒**／ヨウ化カリウム錯体化と表層剥離 | 10,144字 |
+| **第3話** | [**『白亜の断罪者と雌黄（オーピメント）の黄金翼』**](./chapters/ch03.md?id=ch03) | 時計塔での兄弟子ユリアン戦／師ヴェロッキオの残酷な真実／**第2層（卵黄テンペラ＋三硫化二ヒ素）剥離**と『蒼穹の双翼』 | 11,115字 |
+| **第4話** | [**『真夜中の贋作オークションと紫外線（ブラックライト）の罠』**](./chapters/ch04.md?id=ch04) | 少女人形に変装したイリス／**紫外線蛍光と斜光によるクラクリュール（描き亀裂・焼き亀裂・亀裂流入）の公開真贋鑑定バトル** | 11,280字 |
+| **第5話** | [**『石膏（ジェッソ）の墓標と泣き虫な下絵たち』**](./chapters/ch05.md?id=ch05) | ボローニャ石膏廃鉱山の99体の試作体少女像／「お前が流す涙の温度は人間の温度だ！」／**超音波共鳴メスによる第3層（銅石鹸層）剥離** | 12,309字 |
+| **第6話** | [**『蜜蝋（エンカウスティック）の記憶と落ちてきた空』**](./chapters/ch06.md?id=ch06) | サヴォナローラ戦／亜硫酸ガスによる群青病／**蜜蝋の融点（65℃）を逆利用した第4・5層同時剥離**／世界の真相とルカの**色覚喪失** | 12,212字 |
+| **第7話** | [**『色褪せる視界（モノクローム）と卵白のメレンゲ』**](./chapters/ch07.md?id=ch07) | 白黒（グリザイユ）の朝／**黒焦げのメレンゲを「真っ白だろ？」と差し出すルカと「世界一美しい純白ですわ」と食べるイリス**／涙の投降 | 12,526字 |
+| **第8話** | [**『白き籠の鳥と裏切り者のペンティメント』**](./chapters/ch08.md?id=ch08) | 涙で波打つ（コックリング）書き置き／純白の鳥籠でのイリスの誇り／**ランプの熱で「偽証の羊皮紙」の裏から浮かび上がる没食子鉄インクの遺言** | 10,477字 |
+| **第9話** | [**『師（マエストロ）の遺言と赤土（ボーロ）の誇り』**](./chapters/ch09.md?id=ch09) | 師の愛ある7層の真意／キアラの平手打ちと『赤瑪瑙バニッシャー』の継承／**光の濃淡と凹凸で視る『明暗法（キアロスクーロ）視覚』の開眼** | 10,196字 |
+| **第10話** | [**『兄弟子の白、修復師の黒』**](./chapters/ch10.md?id=ch10) | 硫化水素による鉛白弾幕の黒変粉砕／大理石階段でのユリアンとの一騎打ち／**『白百合のイコン』表層0.3ミリ剥離と師匠の下絵開示** | 8,918字 |
+| **第11話** | [**『金箔の下の赤土（ボーロ）――第六層剥離』**](./chapters/ch11.md?id=ch11) | 溶融鉛の処刑台からの空中救出／**卵白リゾチーム酵素と赤瑪瑙共鳴による第6層（純金箔＋赤土ボーロ）剥離**／最下層シノピアの素顔 | 12,657字 |
+| **第12話** | [**『大天蓋・剥離転写（グラン・ストラッポ）――嘘つきパレットが描く明日』**](./chapters/ch12.md?id=ch12) | **直径100mの偽りの神話天井を引き剥がす『大天蓋・剥離転写』**／蘇る群青色／**贋作核で神話を騙しイリスを人間に解放するタイトル回収＆大団円** | 13,014字 |
 
 ---
 
@@ -172,4 +172,4 @@
 - **[`notes/characters.md`](./notes/characters.md)**: 登場人物の詳細設定・口調ルール・アニメ公式ビジュアル仕様書（カラーパレット・シルエット・表情指定）
 
 > 💡 **【制作裏側・ネタバレ設定資料について】**  
-> 全体の三幕構成・全12話詳細プロット、伏線管理シート、各話4シーン設計書（全48シーン）、AI完全自律執筆マニュアル等の【制作裏側アーカイブ】は、全編読了者限定特典および公式ファンブック（有料ブログ等）にて限定公開予定です。
+> 全体の三幕構成・全12話詳細プロット、伏線管理シート、各話4シーン設計書（全48シーン）、AI完全自律執筆マニュアル等の【制作裏側アーカイブ】は、全編読了者限定特典にて限定公開予定です。第12話読了後の「修復師認定試験」に合格すると閲覧可能になります。

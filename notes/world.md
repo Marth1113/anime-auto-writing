@@ -1,4 +1,6 @@
-# 世界観・舞台設定 (world.md)
+<div id="top" class="chapter-top-anchor"></div>
+
+# 世界観・舞台設定 (world.md) :id=world
 
 ## 作品タイトル
 **『嘘つきパレットと剥落の聖女 ―異端修復師は神話の塗り潰しを暴く―』**
