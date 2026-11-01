@@ -5,7 +5,7 @@
   <p align="center" class="novel-hero-en" style="text-align: center !important; margin-top: 0px; margin-bottom: 18px;"><i>The Liar's Palette and the Peeling Saint</i></p>
 
   <div style="max-width: 820px; margin: 0 auto;">
-    <img src="./assets/key_visual_v2.png" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" style="border-radius: 8px; box-shadow: 0 10px 32px rgba(0,0,0,0.45);" />
+    <img src="./assets/key_visual.webp" alt="嘘つきパレットと剥落の聖女 公式キービジュアル（透明水彩画版）" width="100%" style="border-radius: 8px; box-shadow: 0 10px 32px rgba(0,0,0,0.45);" />
   </div>
 
   <p align="center" class="novel-hero-catch" style="text-align: center !important;">
@@ -71,7 +71,7 @@
 <table>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/luka.png" alt="ルカ・ヴァルツ" width="100%" />
+      <img src="./assets/characters/luka.webp" alt="ルカ・ヴァルツ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <div class="character-card-name">ルカ・ヴァルツ (Luka Waltz)</div>
@@ -85,7 +85,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/iris.png" alt="イリス・ラピスラズリ" width="100%" />
+      <img src="./assets/characters/iris.webp" alt="イリス・ラピスラズリ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <div class="character-card-name">イリス・ラピスラズリ (Iris Lapis-Lazuli)</div>
@@ -99,7 +99,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/julian.png" alt="ユリアン・クレムニッツ" width="100%" />
+      <img src="./assets/characters/julian.webp" alt="ユリアン・クレムニッツ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <div class="character-card-name">ユリアン・クレムニッツ (Julian Kremnitz)</div>
@@ -113,7 +113,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/chiara.png" alt="キアラ・ボーロ" width="100%" />
+      <img src="./assets/characters/chiara.webp" alt="キアラ・ボーロ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <div class="character-card-name">キアラ・ボーロ (Chiara Bolo)</div>
@@ -127,7 +127,7 @@
   </tr>
   <tr>
     <td width="35%" align="center">
-      <img src="./assets/characters/savonarola.png" alt="ダンテ・サヴォナローラ" width="100%" />
+      <img src="./assets/characters/savonarola.webp" alt="ダンテ・サヴォナローラ" width="100%" />
     </td>
     <td width="65%" valign="top">
       <div class="character-card-name">ダンテ・サヴォナローラ (Dante Savonarola)</div>
