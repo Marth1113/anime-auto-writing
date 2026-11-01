@@ -33,22 +33,21 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.png">
 
-  <!-- Google Analytics (GA4) / Google Tag Manager (GTM) / Search Console Architecture -->
+  <!-- Google Analytics (GA4) / Google Tag Manager (GTM) -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQRHVN9X"></script>
   <script>
-    // ▼ 分析設定（独立した小説専用GA4ストリームで完全隔離測定）
-    window.GA_MEASUREMENT_ID = 'G-23P7G6C6E9';
-    window.GTM_CONTAINER_ID = '';
+    window.GA_MEASUREMENT_ID = 'G-B4B2Q48L3F';
+    window.GTM_CONTAINER_ID = 'GTM-WQRHVN9X';
 
     window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
 
     if (window.GA_MEASUREMENT_ID) {
       const gScript = document.createElement('script');
       gScript.async = true;
       gScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
       document.head.appendChild(gScript);
-
-      window.gtag = function(){ dataLayer.push(arguments); };
-      gtag('js', new Date());
       gtag('config', window.GA_MEASUREMENT_ID, { send_page_view: false });
     }
   </script>
